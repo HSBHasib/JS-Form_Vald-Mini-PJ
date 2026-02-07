@@ -19,29 +19,24 @@ form.addEventListener("submit", function(dets) {
 
 
     if(!nameReg.test(name.value)) {
-        alert("NameError, Invalid Username");
+        alert("NameError: Name must have a Capital letter and a Number.");
         return;
     }
 
     if(!emailReg.test(email.value)) {
-        alert("EmailError, Invalid email address");
+        alert("EmailError: Enter a valid email address.");
         return;
     }
     if(!passReg.test(pass.value)) {
-        alert("PassError, Invalid password setUp");
+        alert("PassError: Password must be 8+ chars with Big, Small letters & Number.");
         return;
     }
 
     if(!phoneReg.test(phone.value)) {
-        alert("PhoneNumberError, Invalid phone number");
+        alert("PhoneNumberError: Enter a valid Bangladeshi number.");
         return;
     }
     
-    if(dets.target[4].value === "#") {
-        alert("Please, select you postions");
-        return;
-    }
-
     if(dropdown.value === "#") {
         alert("Please, select you postions");
         return;
