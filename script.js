@@ -27,6 +27,7 @@ form.addEventListener("submit", function(dets) {
         alert("EmailError: Enter a valid email address.");
         return;
     }
+    
     if(!passReg.test(pass.value)) {
         alert("PassError: Password must be 8+ chars with Big, Small letters & Number.");
         return;
@@ -45,7 +46,7 @@ form.addEventListener("submit", function(dets) {
     if(!checkBox.checked) {
         alert("Error: Please agree to the conditions first!");
         return;
-    } 
+    }
     
 
     form.reset();
