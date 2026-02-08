@@ -34,77 +34,67 @@ form.addEventListener("submit", function(dets) {
 
 
     
-    // if(!nameReg.test(name.value)) {
-    //     // alert("NameError: Name must have a Capital letter and a Number.");
+    if(!nameReg.test(name.value)) {
+        small[0].textContent = "'Name must have a Capital letter and a Number.'";
+        small[0].style.visibility = "visible";
+        return;
+    } else {
+        name.addEventListener("input", function(){
+            if(nameReg.test(name.value)) {
+                small[0].style.visibility = "hidden";
+            }
+        })
+    }
 
-    //     small[0].textContent = "'Name must have a Capital letter and a Number.'";
-    //     small[0].style.visibility = "visible";
-    //     return;
-    // } else {
-    //     name.addEventListener("input", function(){
-    //         if(nameReg.test(name)) {
-    //             small[0].style.visibility = "hidden";
-    //         }
-    //     })
-    // }
-
-    // if(!emailReg.test(email.value)) {
-    //     // alert("EmailError: Enter a valid email address.");
-    //     small[1].textContent = "'EmailError: Enter a valid email address.'";
-    //     small[1].style.visibility = "visible";
-    //     return;
-    // } else {
-    //     email.addEventListener("input", function(){
-    //         if(emailReg.test(email)) {
-    //             small[1].style.visibility = "hidden";
-    //         }
-    //     })
-    // }
+    if(!emailReg.test(email.value)) {
+        small[1].textContent = "'EmailError: Enter a valid email address.'";
+        small[1].style.visibility = "visible";
+        return;
+    } else {
+        email.addEventListener("input", function(){
+            if(emailReg.test(email.value)) {
+                small[1].style.visibility = "hidden";
+            }
+        })
+    }
     
-    // if(!passReg.test(pass.value)) {
-    //     // alert("PassError: Password must be 8+ chars with Big, Small letters & Number.");
+    if(!passReg.test(pass.value)) {
+        small[2].textContent = "'Password must be 8+ chars with Big, Small letters & Number.'";
+        small[2].style.visibility = "visible";
+        return;
+    } else {
+        pass.addEventListener("input", function(){
+            if(passReg.test(pass.value)) {
+                small[2].style.visibility = "hidden";
+            }
+        })
+    }
 
-    //     small[2].textContent = "'Password must be 8+ chars with Big, Small letters & Number.'";
-    //     small[2].style.visibility = "visible";
-    //     return;
-    // } else {
-    //     pass.addEventListener("input", function(){
-    //         if(passReg.test(pass)) {
-    //             small[2].style.visibility = "hidden";
-    //         }
-    //     })
-    // }
-
-    // if(!phoneReg.test(phone.value)) {
-    //     // alert("PhoneNumberError: Enter a valid Bangladeshi number.");
-
-    //     small[3].textContent = "'Enter a valid Bangladeshi number.'";
-    //     small[3].style.visibility = "visible";
-    //     return;
-    // } else {
-    //     phone.addEventListener("input", function(){
-    //         if(phoneReg.test(phone)) {
-    //             small[3].style.visibility = "hidden";
-    //         }
-    //     })
-    // }
+    if(!phoneReg.test(phone.value)) {
+        small[3].textContent = "'Enter a valid Bangladeshi number.'";
+        small[3].style.visibility = "visible";
+        return;
+    } else {
+        phone.addEventListener("input", function(){
+            if(phoneReg.test(phone.value)) {
+                small[3].style.visibility = "hidden";
+            }
+        })
+    }
     
-    // if(dropdown.value === "#") {
-    //     // alert("Please, select you postions");
-
-    //     small[4].textContent = "'Please, select you postions'";
-    //     small[4].style.visibility = "visible";
-    //     return;
-    // } else {
-    //     dropdown.addEventListener("input", function(){
-    //         if(dropdown.value !== "#") {
-    //             small[4].style.visibility = "hidden";
-    //         }
-    //     })
-    // }
+    if(dropdown.value === "#") {
+        small[4].textContent = "'Please, select you postions'";
+        small[4].style.visibility = "visible";
+        return;
+    } else {
+        dropdown.addEventListener("input", function(){
+            if(dropdown.value !== "#") {
+                small[4].style.visibility = "hidden";
+            }
+        })
+    }
 
     if(!checkBox.checked) {
-        // alert("Error: Please agree to the conditions first!");
         small[5].textContent = "'Error: Please agree to the conditions first!'";
         small[5].style.visibility = "visible";
         return;
@@ -115,42 +105,6 @@ form.addEventListener("submit", function(dets) {
             }
         })
     }
-
-
-
-
-
-
-    // if(!nameReg.test(name.value)) {
-    //     alert("NameError: Name must have a Capital letter and a Number.");
-    //     return;
-    // }
-
-    // if(!emailReg.test(email.value)) {
-    //     alert("EmailError: Enter a valid email address.");
-    //     return;
-    // }
-    
-    // if(!passReg.test(pass.value)) {
-    //     alert("PassError: Password must be 8+ chars with Big, Small letters & Number.");
-    //     return;
-    // }
-
-    // if(!phoneReg.test(phone.value)) {
-    //     alert("PhoneNumberError: Enter a valid Bangladeshi number.");
-    //     return;
-    // }
-    
-    // if(dropdown.value === "#") {
-    //     alert("Please, select you postions");
-    //     return;
-    // }
-
-    // if(!checkBox.checked) {
-    //     alert("Error: Please agree to the conditions first!");
-    //     return;
-    // }
-    
 
     form.reset();
 });
